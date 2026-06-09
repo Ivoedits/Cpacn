@@ -1,0 +1,50 @@
+{
+  "name": "cpacn",
+  "version": "1.0.0",
+  "description": "CpaCN — Painel de Controle",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.cpacn.painel",
+    "productName": "CpaCN",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "lvoedits",
+      "repo": "Cpacn"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "deleteAppDataOnUninstall": false
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "CPA.html",
+      "fonts/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "42.3.3",
+    "electron-builder": "26.15.2"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}
