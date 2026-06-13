@@ -31,7 +31,8 @@
       "oneClick": true,
       "perMachine": false,
       "allowToChangeInstallationDirectory": false,
-      "deleteAppDataOnUninstall": false
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "CpaCN-Setup.${ext}"
     },
     "files": [
       "main.js",
